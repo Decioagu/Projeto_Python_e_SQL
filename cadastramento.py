@@ -123,7 +123,7 @@ dados_02 = [
 
     lista3 = [valor for valor in zip_object]  
 
-    print(lista3) # (('Salvador', 'BA'), ('Ubatuba', 'SP'), ('Belo Horizonte', 'MG'))
+    print(lista3) # [('Salvador', 'BA'), ('Ubatuba', 'SP'), ('Belo Horizonte', 'MG')]
 '''
 
 # Inserir valores nas colunas da tabela tabela SQLite (executar comando)
@@ -163,7 +163,9 @@ maiores_numeros = cursor.fetchall() # Recupera os 5 maiores valores da coluna 'n
 
 lista_dos_maiores_numeros_fibonacci = [valor[0] for valor in maiores_numeros]  # Cria uma lista com os valores da sequência de Fibonacci
 
-print(f'{lista_dos_maiores_numeros_fibonacci=}\n')  # Imprime a lista de Fibonacci
+lista_dos_maiores_numeros_fibonacci_ordenado = sorted(lista_dos_maiores_numeros_fibonacci)  # Ordena a lista em ordem decrescente
+
+print(f'{lista_dos_maiores_numeros_fibonacci_ordenado=}\n')  # Imprime a lista de Fibonacci
 
 # -------------------------------------- CONSULTA BANCO DE DADOS -------------------------------------------
 
